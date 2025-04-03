@@ -1,0 +1,11 @@
+header {
+  background: #333;
+  padding: 10px;
+  color: #fff;
+}
+footer {
+  background: #222;
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+}
