@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ContactForm from "./components/ContactForm";
@@ -10,17 +10,13 @@ function App() {
     <Router>
       <Header />
       <main>
-        <Switch>
+        <Routes>
           <Route path="/" exact>
             <h1>Welcome to Dolla Heating and Cooling</h1>
           </Route>
-          <Route path="/contact">
-            <ContactForm />
-          </Route>
-          <Route path="/gallery">
-            <WorkGallery />
-          </Route>
-        </Switch>
+          <Route path="/contact" element={<ContactForm />} />
+          <Route path="/gallery" element={<WorkGallery />} />
+        </Routes>
       </main>
       <Footer />
     </Router>
